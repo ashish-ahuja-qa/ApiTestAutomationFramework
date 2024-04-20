@@ -4,7 +4,7 @@ Feature: Currency Conversion API Testing
   Scenario: Verify successful API call and valid price
     Given I have a valid API end-point for currency "USD"
     When I make a GET request to the API
-  	Then the API call is successful and returns success
+  	Then the API call is successful and returns "success"
    	And the response contains a valid price
    
   Scenario: Verify the API returns 162 currency pairs	
@@ -27,5 +27,5 @@ Feature: Currency Conversion API Testing
     Scenario: Verify invalid API call returns error
     Given I have a valid API end-point for currency "invalid"
     When I make a GET request to the API
-  	Then the API call is successful and returns error
+  	Then the API call is successful and returns "error"
   

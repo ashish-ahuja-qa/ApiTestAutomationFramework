@@ -40,14 +40,9 @@ public class CurrencyConversionStepDefs {
 		logger.info(response.body().prettyPrint());
 	}
 
-	@Then("the API call is successful and returns success")
-	public void the_api_call_is_successful_and_returns_success() {
-		response.then().statusCode(200).body("result", equalTo("success"));
-	}
-
-	@Then("the API call is successful and returns error")
-	public void the_api_returns_error() {
-		response.then().statusCode(200).body("result", equalTo("error"));
+	@Then("the API call is successful and returns {string}")
+	public void the_api_call_is_successful_and_returns_success(String result) {
+		response.then().statusCode(200).body("result", equalTo(result));
 	}
 
 	@Then("the response contains a valid price")
