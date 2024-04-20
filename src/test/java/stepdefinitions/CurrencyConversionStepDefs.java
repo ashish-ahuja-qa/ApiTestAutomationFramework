@@ -45,6 +45,11 @@ public class CurrencyConversionStepDefs {
 		response.then().statusCode(200).body("result", equalTo("success"));
 	}
 
+	@Then("the API call is successful and returns error")
+	public void the_api_returns_error() {
+		response.then().statusCode(200).body("result", equalTo("error"));
+	}
+
 	@Then("the response contains a valid price")
 	public void the_response_contains_a_valid_price() {
 		response.then().body("rates", Matchers.notNullValue());
@@ -66,11 +71,6 @@ public class CurrencyConversionStepDefs {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
-
-	@Then("the status code is within the range")
-	public void the_status_code_is_within_the_range() {
-		response.then().statusCode(Matchers.allOf(Matchers.greaterThanOrEqualTo(200), Matchers.lessThan(300)));
 	}
 
 	@Then("the response contains a valid price range for AED")
