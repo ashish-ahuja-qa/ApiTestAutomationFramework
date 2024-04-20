@@ -25,23 +25,25 @@ The Currency Conversion API Test Project is designed to ensure the correctness a
 ### Installation
 
 1. Clone the repository:
-
    ```bash
    git clone <repository-url>
+   
 2. Navigate to the project directory:
- ```bash
-	cd currency-conversion-api-test-project
-3. Build the project using Maven:
- ```bash
-	mvn clean install
+   ```bash
+   cd currency-conversion-api-test-project
 
-##Usage
+3. Build the project using Maven:
+   ```bash
+   mvn clean install
+
+## Usage
+
 1. Open the project in your preferred IDE.
 2. Write or modify feature files in the src/test/resources/features directory to define test scenarios.
 3. Implement step definitions in the src/test/java/stepdefinitions directory to define the behavior for each step.
-4. Execute the tests by running the Cucumber test runner class or using Maven commands.	
+4. Execute the tests by running the Cucumber test runner class or using Maven commands.
 
-##Project Structure
+## Project Structure
 
 The project structure is organized as follows:
 
